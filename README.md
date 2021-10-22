@@ -59,6 +59,19 @@ The basic ViT architecture is used, however with only one transformer layer with
 
 ![imgpatches](images/imagepathces.jpg)
 
+**Attention map** represents the correlation (attention) between all the tokens, where the sum of each row equals 1 representing the probability distribution of attention from a query patch to all others.
+
+![attmap](images/attenmap.jpg)
+
+**Long distance attention** we can see two interesting patterns where background patch attends to long distance other background patches, and this flight patch attends to long distance other flight patches.
+
+![attpattern](images/airatten01.jpg)
+
+We can try more heads and more transfomer layers and inspect the attention patterns.
+
+![attanim](images/att_head.gif)
+
+
 
 ## References and more information
 - Article [Transformers without pain](https://www.linkedin.com/pulse/transformers-without-pain-ibrahim-sobh-phd/)
