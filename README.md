@@ -25,6 +25,9 @@ Attention provides a solution to the bottleneck problem.
 - **Core idea**: on each step of the decoder, use a direct connection to the encoder to focus on a particular part of the source sequence.
 Attention is basically a technique to compute a **weighted sum** of the values (in the encoder), dependent on another value (in the decoder).
 
+The main idea of attention can be summarized as mention the OpenAi's [article](https://openai.com/blog/sparse-transformer/):
+- "_... every output element is connected to every input element, and the weightings between them are **dynamically calculated based upon the circumstances**, a process called attention._"
+
 ## Query and Values
 
 - In the seq2seq + attention model, each decoder hidden state (query) attends to all the encoder hidden states (values)
@@ -32,8 +35,29 @@ Attention is basically a technique to compute a **weighted sum** of the values (
 - Attention is a way to obtain a fixed-size representation of an arbitrary set of representations (the values), dependent on some other representation (the query).
 
 ## Transformers for computer vision 
+Transfomer based architectures were used not only for NLP but also for computer vision tasks. One important example is Vision Transformer [ViT](https://arxiv.org/pdf/2010.11929.pdf) that represents a direct application of Transformers to image classification, without any image-specific inductive biases. As mentioned in the paper:
+- "_We show that reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks_" 
+- "_Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks_"
+
+![vit](images/vit003.jpg)
+
+As we see, an input image is splitted into **patches** which are treated the same way as tokens (words) in an NLP application. **Position embeddings** are added to the patch embeddings to retain positional information. Similar to BERT’s **class token**, a classification head is attached here and used during pre-training and fine-tuning. The model is trained on image classification in supervised fashion.
 
 ## Multi-head attention
+The intuition is similar to have a multi-filter in CNNs. Here we can have multi-head attention, to give the network more capacity and ability to learn different attention patterns. By having multiple different layers that generate (or project) the vectors of queries, keys and values, we can learn multiple representations of these queries, keys and values.
+
+![mha](images/mha01.jpg)
+
+Where each token is projected (in a learnable way) into three vecrors Q, K, and V:
+
+- **Q**: Query vector: What I want
+- **K**: Key vector: What type of info I have
+- **V**: Value vector: What actual info I have
+
+## Visualizing the attention
+The basic ViT architecture is used, however with only one transformer layer with one (or four) head(s) for simplicity. The model is trained on CIFAR-10 classification task. The image is splitted in to 12 x 12 = 144 patches as usual, and after training, we can see the 144 x 144 attention scores (where each patch can attend to the others).
+
+![imgpatches](images/imagepathces.jpg)
 
 
 ## References and more information
