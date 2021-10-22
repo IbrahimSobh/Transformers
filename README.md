@@ -16,10 +16,11 @@ Machine Translation (MT) is the task of translating a sentence x from one langua
 - **Encoder**: RNN network that encodes the input sequence to a single vector (sentence encoding)
 - **Decoder**: RNN network that generates the output sequences conditioned on the encoder's output. (conditioned language model)
 
-The problem of the vanilla seq2seq is information bottleneck, where the encoding of the source sentence needs to capture all information about it in one vector.
+![seqseq](images/seq2seq.JPG)
 
-As mentioned in the paper [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473.pdf):
-- "_A potential issue with this encoder–decoder approach is that a neural network needs to be able to compress all the necessary information of a source sentence into a fixed-length vector. This may make it difficult for the neural network to cope with long sentences, especially those that are longer than the sentences in the training corpus._"
+The problem of the vanilla seq2seq is information **bottleneck**, where the encoding of the source sentence needs to capture all information about it in one vector.
+
+As mentioned in the paper [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473.pdf): "_A potential issue with this encoder–decoder approach is that a neural network needs to be able to compress all the necessary information of a source sentence into a fixed-length vector. This may make it difficult for the neural network to cope with long sentences, especially those that are longer than the sentences in the training corpus._"
 
 ![attention001.gif](images/attention001.gif)
 
