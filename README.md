@@ -31,7 +31,15 @@ Attention is basically a technique to compute a **weighted sum** of the values (
 - The weighted sum is a **selective summary** of the information contained in the values, where the query determines which values to focus on.
 - Attention is a way to obtain a fixed-size representation of an arbitrary set of representations (the values), dependent on some other representation (the query).
 
-## References 
+## Transformers for computer vision 
+
+## Multi-head attention
+
+
+## References and more information
+- Article [Transformers without pain](https://www.linkedin.com/pulse/transformers-without-pain-ibrahim-sobh-phd/)
+- Article [Attention for Neural Machine Translation (NMT) without pain](https://www.linkedin.com/pulse/attention-neural-machine-translation-nmt-without-pain-sobh-phd/)
+- Article [Anatomy of the Beast with many heads](https://www.linkedin.com/pulse/anatomy-beast-many-heads-code-ibrahim-sobh-phd/)
 - [CS224n: Natural Language Processing with Deep Learning Stanford / Winter 2019](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
 - [Natural Language Processing with Deep Learning (Winter 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
 - [Neural Machine Translation (seq2seq) Tutorial](https://github.com/tensorflow/nmt)
