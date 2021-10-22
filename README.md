@@ -58,7 +58,12 @@ Where each token is projected (in a learnable way) into three vecrors Q, K, and 
 - **K**: Key vector: What type of info I have
 - **V**: Value vector: What actual info I have
 
+---
+
 ## Visualizing the attention
+
+<a href="https://colab.research.google.com/drive/1bE7aJedF2U-H_Byt_4vM8UQ4ZxHc3aji?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 The basic ViT architecture is used, however with only one transformer layer with one (or four) head(s) for simplicity. The model is trained on CIFAR-10 classification task. The image is splitted in to 12 x 12 = 144 patches as usual, and after training, we can see the 144 x 144 attention scores (where each patch can attend to the others).
 
 ![imgpatches](images/imagepathces.jpg)
