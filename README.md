@@ -1,11 +1,13 @@
 # Transformers
 
-## What is wrong with RNNs and CNNs
+## Introduction
+
+### What is wrong with RNNs and CNNs
 Learning Representations of Variable Length Data is a basic building block of sequence-to-sequence learning for Neural machine translation, summarization, etc
 - **Recurrent Neural Networks (RNNs)** are natural fit variable-length sentences and sequences of pixels. But sequential computation inhibits parallelization. No explicit modeling of long and short-range dependencies.
 - **Convolutional Neural Networks (CNNs)** are trivial to parallelize (per layer) and exploit local dependencies. However, long-distance dependencies require many layers.
 
-## Attention!
+### Attention!
 The Transformer archeticture was proposed in the paper [Attention is All You Need](https://arxiv.org/abs/1706.03762). As mentioned in the paper: 
 - "_We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely_"
 - "_Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train_"
@@ -28,13 +30,15 @@ Attention is basically a technique to compute a **weighted sum** of the values (
 The main idea of attention can be summarized as mention the OpenAi's [article](https://openai.com/blog/sparse-transformer/):
 - "_... every output element is connected to every input element, and the weightings between them are **dynamically calculated based upon the circumstances**, a process called attention._"
 
-## Query and Values
+### Query and Values
 
 - In the seq2seq + attention model, each decoder hidden state (query) attends to all the encoder hidden states (values)
 - The weighted sum is a **selective summary** of the information contained in the values, where the query determines which values to focus on.
 - Attention is a way to obtain a fixed-size representation of an arbitrary set of representations (the values), dependent on some other representation (the query).
 
-## Transformers for computer vision 
+---
+
+## Transformers for Computer Vision 
 Transfomer based architectures were used not only for NLP but also for computer vision tasks. One important example is Vision Transformer [ViT](https://arxiv.org/pdf/2010.11929.pdf) that represents a direct application of Transformers to image classification, without any image-specific inductive biases. As mentioned in the paper:
 - "_We show that reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks_" 
 - "_Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks_"
@@ -71,7 +75,7 @@ We can try more heads and more transfomer layers and inspect the attention patte
 
 ![attanim](images/att_head.gif)
 
-
+---
 
 ## References and more information
 - Article [Transformers without pain](https://www.linkedin.com/pulse/transformers-without-pain-ibrahim-sobh-phd/)
@@ -80,8 +84,3 @@ We can try more heads and more transfomer layers and inspect the attention patte
 - [CS224n: Natural Language Processing with Deep Learning Stanford / Winter 2019](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
 - [Natural Language Processing with Deep Learning (Winter 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
 - [Neural Machine Translation (seq2seq) Tutorial](https://github.com/tensorflow/nmt)
-
-
-
-
-
