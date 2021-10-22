@@ -26,11 +26,11 @@ As mentioned in the paper [Neural Machine Translation by Jointly Learning to Ali
 
 ![attention001.gif](images/attention001.gif)
 
-:bulb: **Attention provides a solution to the bottleneck problem**
+**Attention provides a solution to the bottleneck problem**
 - **Core idea**: on each step of the decoder, use a direct connection to the encoder to focus on a particular part of the source sequence.
 Attention is basically a technique to compute a **weighted sum** of the values (in the encoder), dependent on another value (in the decoder).
 
-:bulb: The main idea of attention can be summarized as mention the OpenAi's [article](https://openai.com/blog/sparse-transformer/):
+The main idea of attention can be summarized as mention the OpenAi's [article](https://openai.com/blog/sparse-transformer/):
 > "_... every output element is connected to every input element, and the weightings between them are **dynamically calculated based upon the circumstances**, a process called attention._"
 
 ### Query and Values
@@ -52,7 +52,7 @@ Transfomer based architectures were used not only for NLP but also for computer 
 As we see, an input image is splitted into **patches** which are treated the same way as tokens (words) in an NLP application. **Position embeddings** are added to the patch embeddings to retain positional information. Similar to BERT’s **class token**, a classification head is attached here and used during pre-training and fine-tuning. The model is trained on image classification in supervised fashion.
 
 ## Multi-head attention
-:bulb: The intuition is similar to have a multi-filter in CNNs. Here we can have multi-head attention, to give the network more capacity and ability to learn different attention patterns. By having multiple different layers that generate (or project) the vectors of queries, keys and values, we can learn multiple representations of these queries, keys and values.
+The intuition is similar to have a multi-filter in CNNs. Here we can have multi-head attention, to give the network more capacity and ability to learn different attention patterns. By having multiple different layers that generate (or project) the vectors of queries, keys and values, we can learn multiple representations of these queries, keys and values.
 
 ![mha](images/mha01.jpg)
 
