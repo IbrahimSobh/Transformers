@@ -1,5 +1,11 @@
 # Transformers
 ![cover](images/cover001.jpg)
+
+1. Introduction
+2. Transformers for Computer Vision 
+3. Visualizing the attention <a href="https://colab.research.google.com/drive/1bE7aJedF2U-H_Byt_4vM8UQ4ZxHc3aji?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+4. MLP-Mixer <a href="https://colab.research.google.com/drive/1T2zEG8iTG4e-YOV-AQPAD41FJ3ud3qLH?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 ## 1) Introduction
 
 ### What is wrong with RNNs and CNNs
@@ -85,10 +91,42 @@ We can try more heads and more transfomer layers and inspect the attention patte
 
 ---
 
+## 4) MLP-Mixer
+
+<a href="https://colab.research.google.com/drive/1T2zEG8iTG4e-YOV-AQPAD41FJ3ud3qLH?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+**MLP-Mixer** in proposed in the paper [An all-MLP Architecture for Vision](https://arxiv.org/pdf/2105.01601.pdf). As mentioned in the paper:
+> "_While convolutions and attention are both sufficient for good performance, neither of them is necessary!_"
+
+> "Mixer is a competitive but conceptually and technically simple alternative, that does not use convolutions or self-attention"
+
+Mixer accepts a sequence of linearly projected image patches (tokens) shaped as a “patches  × channels” table as an input, and maintains this dimensionality. Mixer makes use of two types of MLP layers: 
+
+![mixer](images/mixer03.JPG)
+
+- **Channel-mixing MLPs** allow communication between different channels, they operate on each token independently and take individual rows of the table as inputs 
+- **Token-mixing MLPs** allow communication between different spatial locations (tokens); they operate on each channel independently and take individual columns of the table as inputs.
+
+These two types of layers are interleaved to enable interaction of both input dimensions.
+
+> "_The computational complexity of the network is linear in the number of input patches, unlike ViT whose complexity is quadratic_"
+
+> "_Unlike ViTs, Mixer does not use position embeddings_"
+
+It is commonly observed that the first layers of CNNs tend to learn detectors that act on pixels in **local regions** of the image. In contrast, Mixer allows for **global information exchange** in the token-mixing MLPs. 
+
+> "_Recall that the token-mixing MLPs allow global communication between different spatial locations._" 
+![vizmixer](images/mixer_token_viz_3_blocks.jpg)
+The figure shows hidden units of the four token-mixing MLPs of Mixer trained on CIFAR10 dataset. 
+
+
+---
+
 ## References and more information
 - Article [Transformers without pain](https://www.linkedin.com/pulse/transformers-without-pain-ibrahim-sobh-phd/)
 - Article [Attention for Neural Machine Translation (NMT) without pain](https://www.linkedin.com/pulse/attention-neural-machine-translation-nmt-without-pain-sobh-phd/)
 - Article [Anatomy of the Beast with many heads](https://www.linkedin.com/pulse/anatomy-beast-many-heads-code-ibrahim-sobh-phd/)
+- Article [MLP is all you need](https://www.linkedin.com/pulse/mlp-all-you-need-code-ibrahim-sobh-phd)
 - [CS224n: Natural Language Processing with Deep Learning Stanford / Winter 2019](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
 - [Natural Language Processing with Deep Learning (Winter 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
 - [Neural Machine Translation (seq2seq) Tutorial](https://github.com/tensorflow/nmt)
