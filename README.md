@@ -116,7 +116,9 @@ These two types of layers are interleaved to enable interaction of both input di
 It is commonly observed that the first layers of CNNs tend to learn detectors that act on pixels in **local regions** of the image. In contrast, Mixer allows for **global information exchange** in the token-mixing MLPs. 
 
 > "_Recall that the token-mixing MLPs allow global communication between different spatial locations._" 
+
 ![vizmixer](images/mixer_token_viz_3_blocks.jpg)
+
 The figure shows hidden units of the four token-mixing MLPs of Mixer trained on CIFAR10 dataset. 
 
 
