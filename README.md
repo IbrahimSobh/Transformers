@@ -167,6 +167,7 @@ We can use both the MLP-Mixer and ConvMixer in one network architecture to get t
 - Article [Attention for Neural Machine Translation (NMT) without pain](https://www.linkedin.com/pulse/attention-neural-machine-translation-nmt-without-pain-sobh-phd/)
 - Article [Anatomy of the Beast with many heads](https://www.linkedin.com/pulse/anatomy-beast-many-heads-code-ibrahim-sobh-phd/)
 - Article [MLP is all you need](https://www.linkedin.com/pulse/mlp-all-you-need-code-ibrahim-sobh-phd)
+- Article [Patches Are All You Need](https://www.linkedin.com/pulse/patches-all-you-need-code-ibrahim-sobh-phd/)
 - [CS224n: Natural Language Processing with Deep Learning Stanford / Winter 2019](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
 - [Natural Language Processing with Deep Learning (Winter 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
 - [Neural Machine Translation (seq2seq) Tutorial](https://github.com/tensorflow/nmt)
