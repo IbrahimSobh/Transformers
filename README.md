@@ -5,7 +5,10 @@
 2. ViT: Transformers for Computer Vision 
 3. Visualizing the attention   <a href="https://colab.research.google.com/drive/1bE7aJedF2U-H_Byt_4vM8UQ4ZxHc3aji?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 4. MLP-Mixer   <a href="https://colab.research.google.com/drive/1T2zEG8iTG4e-YOV-AQPAD41FJ3ud3qLH?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-5. MLP-Mixer + ViT   <a href="https://colab.research.google.com/drive/1sHyV7_vpvmBiGyK5BkviyPq6YSw3a2r9?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+5. Hybrid MLP-Mixer + ViT   <a href="https://colab.research.google.com/drive/1sHyV7_vpvmBiGyK5BkviyPq6YSw3a2r9?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+6. ConvMixer and Hybrid ConvMixer + MLP-Mixer   <a href="https://colab.research.google.com/drive/1F1rtlQY0vZ9BVTtP7CuvyeBv2hEOpPTo?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+---
 
 ## 1) Introduction
 
@@ -133,6 +136,29 @@ We can use both the MLP-Mixer and ViT in one network architecture to get the bes
 ![mixvit](images/mixvit.JPG) 
 
  Adding a few self-attention sublayers to mixer is expected to offer a simple way to trade off speed for accuracy.  
+
+---
+
+## 6) Hybrid MLP-Mixer and CovMixer
+
+<a href="https://colab.research.google.com/drive/1F1rtlQY0vZ9BVTtP7CuvyeBv2hEOpPTo?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+> Is the performance of ViTs due to the inherently more powerful Transformer architecture, or is it at least partly due to using patches as the input representation.
+
+> ConvMixer, an extremely simple model that is similar in many aspects to the ViT and the even-more-basic MLP-Mixer
+
+> Despite its simplicity, ConvMixer outperforms the ViT, MLP-Mixer, and some of their variants for similar parameter counts and data set sizes, in addition to outperforming classical vision models such as the ResNet.
+
+> While self-attention and MLPs are theoretically more flexible, allowing for large receptive fields and content-aware behavior, the inductive bias of convolution is well-suited to vision tasks and leads to high data efficiency.
+
+> ConvMixers are substantially slower at inference than the competitors!
+
+![conmixer01](images/conmixer01.png) 
+
+We can use both the MLP-Mixer and ConvMixer in one network architecture to get the best of both worlds.
+
+![convmlpmixer](images/convmlpmixer.JPG)
+
 
 ---
 
