@@ -143,6 +143,8 @@ We can use both the MLP-Mixer and ViT in one network architecture to get the bes
 
 <a href="https://colab.research.google.com/drive/1F1rtlQY0vZ9BVTtP7CuvyeBv2hEOpPTo?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
+ [Patches Are All You Need?](https://arxiv.org/abs/1706.03762)
+
 > Is the performance of ViTs due to the inherently more powerful Transformer architecture, or is it at least partly due to using patches as the input representation.
 
 > ConvMixer, an extremely simple model that is similar in many aspects to the ViT and the even-more-basic MLP-Mixer
