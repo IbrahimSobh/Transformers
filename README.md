@@ -2,9 +2,10 @@
 ![cover](images/cover001.jpg)
 
 1. Introduction
-2. Transformers for Computer Vision 
-3. Visualizing the attention <a href="https://colab.research.google.com/drive/1bE7aJedF2U-H_Byt_4vM8UQ4ZxHc3aji?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-4. MLP-Mixer <a href="https://colab.research.google.com/drive/1T2zEG8iTG4e-YOV-AQPAD41FJ3ud3qLH?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+2. ViT: Transformers for Computer Vision 
+3. Visualizing the attention   <a href="https://colab.research.google.com/drive/1bE7aJedF2U-H_Byt_4vM8UQ4ZxHc3aji?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+4. MLP-Mixer   <a href="https://colab.research.google.com/drive/1T2zEG8iTG4e-YOV-AQPAD41FJ3ud3qLH?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+5. MLP-Mixer + ViT   <a href="https://colab.research.google.com/drive/1sHyV7_vpvmBiGyK5BkviyPq6YSw3a2r9?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ## 1) Introduction
 
@@ -121,6 +122,17 @@ It is commonly observed that the first layers of CNNs tend to learn detectors th
 
 The figure shows hidden units of the four token-mixing MLPs of Mixer trained on CIFAR10 dataset. 
 
+---
+
+## 5) Hybrid MLP-Mixer and ViT
+
+<a href="https://colab.research.google.com/drive/1sHyV7_vpvmBiGyK5BkviyPq6YSw3a2r9?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+We can use both the MLP-Mixer and ViT in one network architecture to get the best of both worlds.
+
+![mixvit](images/mixvit.JPG) 
+
+ Adding a few self-attention sublayers to mixer is expected to offer a simple way to trade off speed for accuracy.  
 
 ---
 
