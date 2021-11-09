@@ -99,7 +99,7 @@ We can try more heads and more transfomer layers and inspect the attention patte
 
 <a href="https://colab.research.google.com/drive/1T2zEG8iTG4e-YOV-AQPAD41FJ3ud3qLH?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-**MLP-Mixer** in proposed in the paper [An all-MLP Architecture for Vision](https://arxiv.org/pdf/2105.01601.pdf). As mentioned in the paper:
+**MLP-Mixer** is proposed in the paper [An all-MLP Architecture for Vision](https://arxiv.org/pdf/2105.01601.pdf). As mentioned in the paper:
 > "_While convolutions and attention are both sufficient for good performance, neither of them is necessary!_"
 
 > "Mixer is a competitive but conceptually and technically simple alternative, that does not use convolutions or self-attention"
