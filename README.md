@@ -1,6 +1,8 @@
 # Transformers
 <!-- ![cover](images/cover001.jpg) -->
-![cover](images/mixvit.JPG)
+![cover](images/covtrans003.JPG)
+
+This is a practical introduction to Transformers from _Natural Language Processing_ (NLP) to _Computer vision_ (CV)
 
 1. Introduction
 2. ViT: Transformers for Computer Vision 
