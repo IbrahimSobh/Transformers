@@ -1,5 +1,6 @@
 # Transformers
-![cover](images/cover001.jpg)
+<!-- ![cover](images/cover001.jpg) -->
+![cover](images/mixvit.JPG)
 
 1. Introduction
 2. ViT: Transformers for Computer Vision 
