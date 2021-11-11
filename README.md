@@ -9,7 +9,8 @@ This is a practical introduction to Transformers from _Natural Language Processi
 3. Visualizing the attention   <a href="https://colab.research.google.com/drive/1bE7aJedF2U-H_Byt_4vM8UQ4ZxHc3aji?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 4. MLP-Mixer   <a href="https://colab.research.google.com/drive/1T2zEG8iTG4e-YOV-AQPAD41FJ3ud3qLH?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 5. Hybrid MLP-Mixer + ViT   <a href="https://colab.research.google.com/drive/1sHyV7_vpvmBiGyK5BkviyPq6YSw3a2r9?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-6. ConvMixer and Hybrid ConvMixer + MLP-Mixer   <a href="https://colab.research.google.com/drive/1F1rtlQY0vZ9BVTtP7CuvyeBv2hEOpPTo?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+6. ConvMixer   <a href="https://colab.research.google.com/drive/1F1rtlQY0vZ9BVTtP7CuvyeBv2hEOpPTo?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+7. Hybrid ConvMixer + MLP-Mixer   <a href="https://colab.research.google.com/drive/1F1rtlQY0vZ9BVTtP7CuvyeBv2hEOpPTo?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ---
 
@@ -142,7 +143,7 @@ We can use both the MLP-Mixer and ViT in one network architecture to get the bes
 
 ---
 
-## 6) Hybrid MLP-Mixer and CovMixer
+## 6) CovMixer
 
 <a href="https://colab.research.google.com/drive/1F1rtlQY0vZ9BVTtP7CuvyeBv2hEOpPTo?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
@@ -160,7 +161,13 @@ We can use both the MLP-Mixer and ViT in one network architecture to get the bes
 
 ![conmixer01](images/conmixer01.png) 
 
-We can use both the MLP-Mixer and ConvMixer in one network architecture to get the best of both worlds.
+--- 
+
+## 7) Hybrid MLP-Mixer and CovMixer
+
+<a href="https://colab.research.google.com/drive/1F1rtlQY0vZ9BVTtP7CuvyeBv2hEOpPTo?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+Once again, we can use both the MLP-Mixer and ConvMixer in one network architecture to get the best of both worlds. Here is a simple example. 
 
 ![convmlpmixer](images/convmlpmixer.JPG)
 
