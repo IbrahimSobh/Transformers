@@ -56,7 +56,7 @@ The main idea of attention can be summarized as mention the OpenAi's [article](h
 ---
 
 ## 2) Transformers for Computer Vision 
-Transfomer based architectures were used not only for NLP but also for computer vision tasks. One important example is Vision Transformer [ViT](https://arxiv.org/pdf/2010.11929.pdf) that represents a direct application of Transformers to image classification, without any image-specific inductive biases. As mentioned in the paper:
+Transformer based architectures were used not only for NLP but also for computer vision tasks. One important example is Vision Transformer [ViT](https://arxiv.org/pdf/2010.11929.pdf) that represents a direct application of Transformers to image classification, without any image-specific inductive biases. As mentioned in the paper:
 > "_We show that reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks_" 
 
 > "_Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks_"
