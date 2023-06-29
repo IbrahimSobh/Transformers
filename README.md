@@ -22,12 +22,12 @@ Learning Representations of Variable Length Data is a basic building block of se
 - **Convolutional Neural Networks (CNNs)** are trivial to parallelize (per layer) and exploit local dependencies. However, long-distance dependencies require many layers.
 
 ### Attention!
-The Transformer archeticture was proposed in the paper [Attention is All You Need](https://arxiv.org/abs/1706.03762). As mentioned in the paper: 
+The Transformer architecture was proposed in the paper [Attention is All You Need](https://arxiv.org/abs/1706.03762). As mentioned in the paper: 
 > "_We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely_"
 
 > "_Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train_"
 
-Machine Translation (MT) is the task of translating a sentence x from one language (the source language) to a sentence y in another language (the target language). One basic and well known neural network architecture for NMT is called sequence-to-sequence [seq2seq](https://arxiv.org/pdf/1409.3215v3.pdf) and it involves two RNNs.
+Machine Translation (MT) is the task of translating sentence x from one language (the source language) to sentence y in another language (the target language). One basic and well-known neural network architecture for NMT is called sequence-to-sequence [seq2seq](https://arxiv.org/pdf/1409.3215v3.pdf) and it involves two RNNs.
 - **Encoder**: RNN network that encodes the input sequence to a single vector (sentence encoding)
 - **Decoder**: RNN network that generates the output sequences conditioned on the encoder's output. (conditioned language model)
 
