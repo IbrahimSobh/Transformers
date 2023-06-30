@@ -44,7 +44,7 @@ As mentioned in the paper [Neural Machine Translation by Jointly Learning to Ali
 - **Core idea**: on each step of the decoder, use a direct connection to the encoder to focus on a particular part of the source sequence.
 Attention is basically a technique to compute a **weighted sum** of the values (in the encoder), dependent on another value (in the decoder).
 
-The main idea of attention can be summarized as mention the OpenAi's [article](https://openai.com/blog/sparse-transformer/):
+The main idea of attention can be summarized as mentioned in the OpenAi's [article](https://openai.com/blog/sparse-transformer/):
 > "_... every output element is connected to every input element, and the weightings between them are **dynamically calculated based upon the circumstances**, a process called attention._"
 
 ### Query and Values
